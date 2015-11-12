@@ -1,12 +1,14 @@
-# Site settings
 title: Lasse Karagiannis blogg
 email: lasse.l.karagiannis@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
- Hej, det här ska vara en delexamination i kursen "klientbaserad webbprogrammering"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://github.com/Karagiannis" # the base hostname & protocol for your site
+ Hej, det har ska vara en delexamination i kursen "klientbaserad webbprogrammering"
+baseurl: "" #"/blog/"
+url: "http://karagiannis.github.io" # the base hostname & protocol for your site
 twitter_username: Amalek_
 github_username:  Karagiannis
-
 # Build settings
 markdown: kramdown
+disqus_username: lasse_karagiannis
+disqus_shortname: lassek
+disqusid: lasse_karagiannis
+
