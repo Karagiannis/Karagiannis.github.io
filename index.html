@@ -5,19 +5,61 @@ layout: default
 <div class="home">
 
   <h1 class="page-heading">Posts</h1>
+<!--
+  <header>
+            <h1>Elefanter</h1>
+    </header>  -->
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+  <nav>
+    <p id="showMenuLink"><a href="#navMenus"><img src="/assets/menu-icon.gif" alt="Visa meny"></a></p>
+    <div id="navMenus">
+      <ul id="globalnav">
+        <li><a href=# id="thisSection">Startsida</a></li>
+        <li><a href=#>Blogg index</a></li>
+        <li><a href=#>Bildgalleri</a></li>
+        <li><a href=#>Kontakt</a></li>
+      </ul>
+    </div> <!-- End navMenus -->
+  </nav>
+  <main>
+    <h1>Intro</h1>
+    <div id="contents">
+      <section>
+        <img src="/assets/elephant-big.png" alt="Stor elefant framifran" class="floatLeft">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique velit, nec scelerisque risus. Nam facilisis et urna vel consequat. Donec consectetur arcu vel sagittis porta. Mauris justo leo, vestibulum sed nisi non, sagittis molestie mi. Nunc posuere faucibus justo sed interdum. Phasellus bibendum sodales mauris sit amet blandit. Cras accumsan sed mi fringilla bibendum.</p>
+        <ul class="post-list">
+          {% for post in site.posts limit:2 %}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </li>
+          {% endfor %}
+        </ul>
+      </section>
+
+    </div> <!-- End content -->
+    <div id="notes">
+      <h2>Korta noteringar</h2>
+      <section>
+        <h4>Praesent ornare diam</h4>
+        <p>Etiam mattis placerat dolor, a molestie tellus laoreet in. Vestibulum laoreet eu ligula a condimentum.</p>
+        <p>Fusce ut posuere leo. Donec justo purus, fringilla a erat nec, sodales accumsan nisl. In eleifend tortor urna, a interdum lectus tempus vitae.</p>
+        <br>
+        <br>
+        <br>
+      </section>
+
+    </div> <!-- End notes -->
+  </main>
+</div>
+<div class="blog-index">
+  {% assign post = site.posts.first %}
+  {% assign content = post.content %}
+  {% include post_detail.html %}
+</div>
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
