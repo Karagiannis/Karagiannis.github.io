@@ -23,10 +23,13 @@ layout: default
   </nav>-->
   <main>
     <div id="content">
-      <h1>Presentation</h1>
+      <h1>Senaste bloggposten</h1>
       <section>
-        <img src="/assets/elephant-big.png" alt="Stor elefant framifran" class="floatLeft">
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique velit, nec scelerisque risus. Nam facilisis et urna vel consequat. Donec consectetur arcu vel sagittis porta. Mauris justo leo, vestibulum sed nisi non, sagittis molestie mi. Nunc posuere faucibus justo sed interdum. Phasellus bibendum sodales mauris sit amet blandit. Cras accumsan sed mi fringilla bibendum.</p>
+        <div class="blog-index">
+          {% assign post = site.posts.first %}
+          {% assign content = post.content %}
+          {% include post_detail.html %}
+        </div>
       </section>
 
     </div> <!-- End content -->
@@ -34,16 +37,21 @@ layout: default
     <div id="notes">
       <h2>Korta noteringar</h2>
       <section>
-        <h4>Praesent ornare diam</h4>
-        <p>Etiam mattis placerat dolor, a molestie tellus laoreet in. Vestibulum laoreet eu ligula a condimentum.</p>
-        <p>Fusce ut posuere leo. Donec justo purus, fringilla a erat nec, sodales accumsan nisl. In eleifend tortor urna, a interdum lectus tempus vitae.</p>
-        <br>
-        <br>
-        <br>
+        <ul class="post-list">
+          {% for post in site.posts %}
+          <li>
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+            <h2>
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+            </h2>
+          </li>
+          {% endfor %}
+        </ul>
       </section>
     </div> <!-- End notes -->
 
-    <div>
+   <!-- <div>
       <ul class="post-list">
         {% for post in site.posts limit:2 %}
         <li>
@@ -55,9 +63,9 @@ layout: default
         </li>
         {% endfor %}
       </ul>
-    </div>
+    </div>-->
     <div class="blog-index">
-      {% assign post = site.posts.first %}
+      {% assign post = site.posts.previous %}
       {% assign content = post.content %}
       {% include post_detail.html %}
     </div>
