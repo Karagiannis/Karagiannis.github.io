@@ -19,7 +19,7 @@ body {
     line-height: $base-line-height;
     font-weight: 300;
     color: $text-color;
-    background-color: $background-color;
+    background-color: #000;
    // background-color: #111111;
     -webkit-text-size-adjust: 100%;
 }
@@ -43,6 +43,7 @@ h1{font-family: fantasy}
  */
 img {
     max-width: 100%;
+    height:auto;
     vertical-align: middle;
 }
 
@@ -158,11 +159,13 @@ pre {
 
     max-width: -webkit-calc(800px - (#{$spacing-unit} * 2));
     max-width:         calc(800px - (#{$spacing-unit} * 2));
+    max-width:1000px;
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
     padding-left: $spacing-unit;
     @extend %clearfix;
+    background-color: #FC3;
 
     @include media-query($on-laptop) {
         max-width: -webkit-calc(800px - (#{$spacing-unit}));
