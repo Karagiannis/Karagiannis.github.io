@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-<div id="wrapper">
 <div class="home">
 
   <!--<h1 class="page-heading">Posts</h1> -->
@@ -9,38 +8,29 @@ layout: default
   <header>
             <h1>Elefanter</h1>
     </header>  -->
-
-  <nav>
+<div id="wrapper">
+ <!-- <nav>
     <p id="showMenuLink"><a href="#navMenus"><img src="/assets/menu-icon.gif" alt="Visa meny"></a></p>
     <div id="navMenus">
       <ul id="globalnav">
         <li><a href=# id="thisSection">Startsida</a></li>
         <li><a href=#>Blogg index</a></li>
         <li><a href=#>Bildgalleri</a></li>
-        <li><a href=#>Kontakt</a></li>
+        <li><a href=#>&nbsp;&nbsp;Kontakt&nbsp;&nbsp;</a></li>
+
       </ul>
-    </div> <!-- End navMenus -->
-  </nav>
+    </div>
+  </nav>-->
   <main>
-    <div id="contents">
+    <div id="content">
       <h1>Presentation</h1>
       <section>
         <img src="/assets/elephant-big.png" alt="Stor elefant framifran" class="floatLeft">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris non tristique velit, nec scelerisque risus. Nam facilisis et urna vel consequat. Donec consectetur arcu vel sagittis porta. Mauris justo leo, vestibulum sed nisi non, sagittis molestie mi. Nunc posuere faucibus justo sed interdum. Phasellus bibendum sodales mauris sit amet blandit. Cras accumsan sed mi fringilla bibendum.</p>
-        <ul class="post-list">
-          {% for post in site.posts limit:2 %}
-          <li>
-            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-            <h2>
-              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-            </h2>
-          </li>
-          {% endfor %}
-        </ul>
       </section>
 
     </div> <!-- End content -->
+
     <div id="notes">
       <h2>Korta noteringar</h2>
       <section>
@@ -51,16 +41,31 @@ layout: default
         <br>
         <br>
       </section>
-
     </div> <!-- End notes -->
+
+    <div>
+      <ul class="post-list">
+        {% for post in site.posts limit:2 %}
+        <li>
+          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+          <h2>
+            <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+          </h2>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="blog-index">
+      {% assign post = site.posts.first %}
+      {% assign content = post.content %}
+      {% include post_detail.html %}
+    </div>
   </main>
+
 </div>
-  </div>
-<div class="blog-index">
-  {% assign post = site.posts.first %}
-  {% assign content = post.content %}
-  {% include post_detail.html %}
-</div>
+
 
   <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
+</div>
