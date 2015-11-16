@@ -30,7 +30,6 @@ I don't think that sass adds much value, save for the fact that one can assign v
  do basic math, but this is something that one really would expect of a scripting language, even if it is free.
  
  No, the truth is that CSS is in such a sorry state, and that sass makes very little to straighten up things.
- It looks like a piece of software written by somebody that never took or never passed the compiler designers course.
  Variable declaration and nesting of primitives, all good, but cannot add any substantial value, to something that is essentially crap.
  
  I do not blame the staff of teachers, for choosing sass. The industry demands knowledge of sass, and it is
@@ -46,7 +45,7 @@ I don't think that sass adds much value, save for the fact that one can assign v
  
   Some  patterns that CSS follows are just not predictable, cannot be deduced, one just have to memorize it. Add browser dependency concerns,
   and you find yourself in a guessing game were you add extra CSS statements, just to be sure that you cover all angles,
-  just in case it wouldn't work in some other browser. Your doubling down on <code> display:block>/code> statements,
+  just in case it wouldn't work in some other browser. Your doubling down on <code> display:block></code> statements,
   just to be covered, not because you understand why something worked or didn't worked.
   A while-loop in traditional programming language, is predictable, one can deduce the outcome by applying methodological,
   structured logical thinking, but this is really not the case for CSS, it is a game where you try to remember what worked before,
@@ -153,14 +152,14 @@ then you do a media query to make the browser to respond differently at a certai
      
   The first thing to notice is the pure ugliness of the concept of psudoclasses. Note the div of navmenues is used for the first
   time, and it is for the usage of displaying the global nav, but know as a block, the pseudoclass target refers only to the primitive
-  that is written * d i r e c t l y** u n d e r* #navMenus in the HTML-code which is 
+  that is written <bold> d i r e c t l y  u n d e r</bold> #navMenus in the HTML-code which is 
   <code><ul id="globalnav"></code>.
   If you don't understand that this is as bad as using goto-constructs or as bad and ugly as extensive use of global variables,
-   or as bad as designing a programming languages that dpendeds on the amount of tabs or spaces trailing a statement.
-  You just don't do these ugly things.
-  If you don't get it then something is missing in your CS-education, or you have no sense of what is beautiful in programming code.
+   or as bad as designing a programming languages that dependeds on the amount of tabs or spaces trailing a statement.
+  You simply just don't do these ugly things.
+  If you don't get it, then something is missing in your CS-education, or you have no sense of what is beautiful in programming code.
   
-  For me this is a an unmistaken sign of sloppiness, laziness, lack of care for details, lack of love to the art of programming,
+  For me, this is a an unmistaken sign of sloppiness, laziness, lack of care for details, lack of love to the art of programming,
    and absolutely no sense of pride in ones work.
   You just don't publish such rubbish, something that ugly and bad as the above structure, without having degenerated to someone 
   who really prefers to do something else than programming. 
@@ -186,6 +185,6 @@ only the allowed syntax, never the semantics. This is a serious problem, that de
   What value, can a scripting-tool like scss have that does not take care of this idiocy of pseudo classes, the requirement of writing
   something direct below something so that dynamic CSS works, and the mess of doubling down on <code>display:block</code> statements. 
   
-  Absolutely none, it is a piece of crap, just like css, which it doesn't attempt to hide.
+  Absolutely none, it is a piece of crap, just like css, which I passionately hate(because it cannot be predicted), and which SASS  does not attempt to hide.
   
  
